@@ -23,6 +23,5 @@ public class OrderDetail {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String description;
-    private List<Product> products;
     private String totalPrice;
 }
