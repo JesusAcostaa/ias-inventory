@@ -1,7 +1,7 @@
 package com.iasinventory.application.controller;
 
-import com.iasinventory.domain.models.Product;
-import com.iasinventory.domain.usecase.service.ProductService;
+import com.iasinventory.domain.models.Order;
+import com.iasinventory.domain.usecase.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,19 +12,23 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/iasinventory/product")
-public class ProductController {
+@RequestMapping("/iasinventory/order")
+public class OrderController {
 
     @Autowired
-    private ProductService productService;
+    private OrderService orderService;
 
     @GetMapping("/getall")
-    public List<Product> getAllProducts() {
-        return productService.getAllProducts();
+    public List<Order> getAllOrder(){
+        return orderService.getAllOrders();
     }
 
     @PostMapping()
-    public Product createProduct(@RequestBody Product product) {
-        return productService.createProduct(product);
+    public Order createOrder(@RequestBody Order order){
+        return orderService.createOrder(order);
     }
+
+
+
+
 }
