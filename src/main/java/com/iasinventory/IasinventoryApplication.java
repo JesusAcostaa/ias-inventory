@@ -1,0 +1,13 @@
+package com.iasinventory;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class IasinventoryApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(IasinventoryApplication.class, args);
+	}
+
+}
